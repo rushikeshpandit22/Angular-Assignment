@@ -1,0 +1,17 @@
+.divtag{
+    width: 100%;
+    background-color: #ccc;    
+}
+.divtag div{
+    display: inline-block;
+}
+.divtag div:last-child{
+    vertical-align: top;
+    margin-top: 32px;
+    margin-left: 20px;
+    font-family: fantasy;
+    font-display: block;
+}
+.formone{
+     margin-top: 32px;
+}
