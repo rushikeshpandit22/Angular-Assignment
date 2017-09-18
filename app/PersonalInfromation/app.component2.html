@@ -13,35 +13,25 @@
         
     <div class="row">
       <div class="col-7">
-        <label class="form-label">Email</label>
-        <input name="email" type="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" [(ngModel)] = 'userdata.email' #e = ngModel required />
-          <div *ngIf = '!e.valid' style="color: red">You enter Invalid Email Address</div>  
+        <label class="form-label">Marital Status</label>
+         <div class = 'col-4'><input type="radio" [(ngModel)] = 'userdata.maritalstatus' name="maritalstatus" value="Maried">Maried</div>
+         <div class = 'col-4'><input type="radio" [(ngModel)] = 'userdata.maritalstatus' name="maritalstatus"Value="Unmaried">Unmaried</div>
       </div>
     </div>
         
     <div class="row">
-      <div class="col-9">
-        <label class="form-label">Street Address</label>
-        <input name="address" type="text" placeholder="Address" [(ngModel)] = 'userdata.address'/>
-      </div>
+        <div class="col-9">
+            <label class="form-label">Gender</label>
+          <!--<div *ngFor = "let g of gender"><label><input type="radio" [(ngModel)] = 'userdata.gender' name = "Gender" value = />{{g}}</label></div>-->
+            <div class = 'col-4'><input type="radio" [(ngModel)] = 'userdata.gender'  name="sex" value="male">Male</div>
+            <div class = 'col-4'><input type="radio" [(ngModel)] = 'userdata.gender'  name="sex" value="female">Female</div>
+        </div>
     </div>
-          
-    <div class="row">
-      <div class="col-4">
-        <input name="city" type="text" placeholder="City" />
-      </div>
-      <div class="col-4">
-        <input name="state" type="text" placeholder="State" />
-      </div>
-      <div class="col-4">
-        <input name="zipcode" type="text" placeholder="Zip Code" />
-      </div>
-    </div>
-    
+     
     <div class="row">
       <div class="col-3">
-        <label class="form-label">Mobile Phone</label>
-        <input name="mobile-phone" type="text" [(ngModel)] = 'userdata.mobileNo' required />
+        <label class="form-label">Blood Group</label>
+        
       </div>
     </div>
    
@@ -51,6 +41,6 @@
         <input name="date-of-birth" type="date" [(ngModel)] = 'userdata.dob' required/>
       </div>
     </div>
-  <input type="submit" value="Submit" [disabled] = '!form.valid' />
+  <input type="submit" value="Submit"  />
 
 </form>
