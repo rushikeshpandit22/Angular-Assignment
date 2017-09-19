@@ -7,5 +7,28 @@
     </div>
   </div>
 <div class='formone'>
-<app-Personal-Information>Waiting......</app-Personal-Information>  
+    
+<!--<app-Personal-Information>Waiting......</app-Personal-Information>-->
+ <form-wizard>
+  <wizard-step [title]="'Personal Details'"  (onNext)="onStep1Next($event)">
+    <h1>{{fromTitle}}</h1>
+    <app-Personal-Information>Waiting......</app-Personal-Information>
+  </wizard-step>
+  <wizard-step [title]="'Contact Details'" (onNext)="onStep2Next($event)">
+    <h1>Step2</h1>
+  </wizard-step>
+  <wizard-step [title]="'Education Details'" (onNext)="onStep3Next($event)">
+    <h1>Step3</h1>
+  </wizard-step>
+  <wizard-step [title]="'Work Profile'" (onComplete)="onComplete($event)">
+    <div [ngSwitch]="isCompleted">
+      <div *ngSwitchDefault>
+        <h1>Step4</h1>
+      </div>
+      <div *ngSwitchCase="true">
+        <h4>Thank you! You have completed all the steps.</h4>
+      </div>
+    </div>
+  </wizard-step>
+</form-wizard>
 </div>
