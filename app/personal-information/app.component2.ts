@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import { userinformation } from '../UserIformation';
 @Component({
   selector: 'app-Personal-Information',
   templateUrl: './app.component2.html',
@@ -8,13 +8,19 @@ import { NgForm } from '@angular/forms';
 })
 export class App2Component {
     fromTitle = 'Personal Information';
-    userdata = {
+    userdata: userinformation = {
         fname: '',
         lname: '',
         maritalstatus: '',
         gender: '',
         bloodgroup: '',
-        dob: ''
+        dob: '',
+        email: '',
+        mobile: 0,
+        adress: '',
+        city: '',
+        state: '',
+        zipcode: 0
     };
     gender = [ 
        'male','female'    

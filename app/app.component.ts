@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'School Employee Managment System';
+    onComplete(e){
+        console.log('complited'+e);
+    }
 }
