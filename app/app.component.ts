@@ -6,8 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']  
 })
 export class AppComponent {
-  title = 'School Employee Managment System';
-    onComplete(e){
-        console.log('complited'+e);
+title = 'School Employee Managment System';
+message: string;
+onComplete(e) {
+        console.log('complited');
     }
+receiveMessage($event) {
+ this.message = $event;
+ console.log($event);	
+ }
 }

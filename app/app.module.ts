@@ -7,6 +7,10 @@ import { App2Component } from './personal-information/app.component2';
 import { ContactInformationComponent } from './contact-information/contact-information.component';
 import { EducationComponent } from './education-information/education.component';
 import { WorkComponent } from './work-information/work.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { appRoutes } from './app.router';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,10 +18,12 @@ import { WorkComponent } from './work-information/work.component';
     App2Component,
     ContactInformationComponent,
     EducationComponent,
-    WorkComponent
-  ],
+    WorkComponent,
+    LoginPageComponent,
+    RegistrationPageComponent
+ ],
   imports: [
-    BrowserModule,FormsModule,ReactiveFormsModule,FormWizardModule  
+    BrowserModule,FormsModule,ReactiveFormsModule,FormWizardModule,RouterModule.forRoot(appRoutes)  
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,11 +8,11 @@ body {
 }
 /*input.ng-valid {
     border: 0.5px solid green;
-}*/
+}
 
 input.ng-invalid {
     border: 2px solid red;
-}
+}*/
 h2.form-title,
 h2.form-section-title {
   font-family: 'Open Sans Condensed', Helvetica, sans-serif;

@@ -1,6 +1,6 @@
 .divtag{
     width: 100%;
-    background-color: #ccc;    
+    background-color: cornflowerblue;    
 }
 .divtag div{
     display: inline-block;
@@ -15,4 +15,11 @@
 .formone{
      margin-top: 32px;
 }
-
+h1 {
+	font-size: 30px;
+}
+p {
+	color: dodgerblue;
+	margin-left: 0px;
+	font-size: 30px;
+}

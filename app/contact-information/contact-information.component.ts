@@ -1,19 +1,13 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { userinformation } from '../UserIformation';
+
 @Component({
   selector: 'app-contact-information',
   templateUrl: './contact-information.component.html',
   styleUrls: ['./contact-information.component.css']
 })
 export class ContactInformationComponent {
-userdata: userinformation = {
-        fname: '',
-        lname: '',
-        maritalstatus: '',
-        gender: '',
-        bloodgroup: '',
-        dob: '',
+    userdata = {
         email: '',
         mobile: 0,
         adress: '',
@@ -24,4 +18,5 @@ userdata: userinformation = {
 submitForm(form: NgForm) {
         console.log(this.userdata);
     }
+
 }

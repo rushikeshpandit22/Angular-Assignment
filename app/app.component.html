@@ -1,30 +1,36 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
 <div class="divtag">
-    <div><img width="200" src="https://vericampus.com/wp-content/uploads/2017/03/LMS3.png">
-    </div> 
-  <div>
-      <h1>Welcome to {{title}}!</h1>
+   	<img src="http://davbarara.co.in/ProfileImages/266f7b53-fb10-4f90-93ec-5ae2333dc138_metricschool.jpg" width="80" height="80" 			class="d-inline-block align-top" alt="">
+    <div>
+	 <h1>{{title}}</h1>
+      <a [routerLink] = "['/login']">Login</a>
+      <a [routerLink] = "['/registration']">Registration</a>
     </div>
   </div>
-<div class='formone'>
-    
-<!--<app-Personal-Information>Waiting......</app-Personal-Information>-->
+<!--<nav class="navbar navbar-light bg-light" style="background-color: cornflowerblue">
+  <a class="navbar-brand" href="#">
+    <img src="http://davbarara.co.in/ProfileImages/266f7b53-fb10-4f90-93ec-5ae2333dc138_metricschool.jpg" width="50" height="50" class="d-inline-block align-top" alt="">
+    <a >{{title}}</a>
+  </a>
+</nav>-->
+	<router-outlet></router-outlet>
  <form-wizard>
   <wizard-step [title]="'Personal Details'">
-    <h1>{{fromTitle}}</h1>
-    <app-Personal-Information>Waiting......</app-Personal-Information>
+    <p>{{message}}</p>
+    <app-Personal-Information (messageEvent) = "receiveMessage($event)">Waiting......</app-Personal-Information>
   </wizard-step>
   <wizard-step [title]="'Contact Details'">
-    <h1>Step2</h1>
-     <app-contact-information>Loading...............</app-contact-information>  
+    <p>Contact Information</p>
+     <app-contact-information (messageEvent) = "receiveMessage($event)">Loading...............</app-contact-information>  
   </wizard-step>
   <wizard-step [title]="'Education Details'">
-    <h1>Step3</h1>
+    <p>Education Information</p>
   </wizard-step>
   <wizard-step [title]="'Work Profile'" (onComplete)="onComplete($event)">
     <div [ngSwitch]="isCompleted">
       <div *ngSwitchDefault>
-        <h1>Step4</h1>
+        <p>Work Profile</p>
       </div>
       <div *ngSwitchCase="true">
         <h4>Thank you! You have completed all the steps.</h4>
@@ -32,4 +38,4 @@
     </div>
   </wizard-step>
 </form-wizard>
-</div>
+
