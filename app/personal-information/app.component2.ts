@@ -26,7 +26,7 @@ ngOnInit() {
 }
 submitForm(form: NgForm) {
     console.log(this.userdata);
-	localStorage.setItem('Name', this.userdata.fname);
+	localStorage.setItem('userdata', this.userdata.fname);
 	
   }
 
