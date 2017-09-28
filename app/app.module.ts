@@ -23,7 +23,7 @@ import { RouterModule } from '@angular/router';
     RegistrationPageComponent
  ],
   imports: [
-    BrowserModule,FormsModule,ReactiveFormsModule,FormWizardModule,RouterModule.forRoot(appRoutes)  
+    BrowserModule,FormsModule,ReactiveFormsModule,FormWizardModule,RouterModule.forRoot(appRoutes, { enableTracing: true })  
   ],
   providers: [],
   bootstrap: [AppComponent]

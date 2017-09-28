@@ -17,6 +17,7 @@ export class ContactInformationComponent {
     };
 submitForm(form: NgForm) {
         console.log(this.userdata);
+        localStorage.setItem('contactdata',JSON.stringify(this.userdata));
     }
 
 }

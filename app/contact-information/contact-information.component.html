@@ -6,7 +6,7 @@
       <div class="col-7">
         <label class="form-label">Email</label>
         <input name="email" type="text" text="example@gmail.com" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" [(ngModel)] = 'userdata.email' #e = ngModel required />
-        <div *ngIf = '!e?.valid &&  e.touched' style="color: red">You enter Invalid Email Address</div>  
+        <div *ngIf = '!e?.valid &&  e.touched' class="alert alert-danger" role="alert" style="color: red">You enter Invalid Email Address</div>  
       </div>
     </div>
         
@@ -32,7 +32,8 @@
     <div class="row">
       <div class="col-3">
         <label class="form-label">Mobile Phone</label>
-        <input name="mobile-phone" type="text" [(ngModel)] = 'userdata.mobileNo' required />
+        <input name="mobile-phone" #mn=ngModel pattern="[7-9]{1}[0-9]{9}" type="tel" [(ngModel)] = 'userdata.mobileNo' required />
+      <div *ngIf = "!mn?.valid &&  mn.touched" class="alert alert-danger" role="alert" style="color: red">Please Enter Valid Mobile Number</div>   
       </div>
     </div>
     <input  class="btn btn-primary" type="submit"  value="Save"/>
