@@ -11,6 +11,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { appRoutes } from './app.router';
 import { RouterModule } from '@angular/router';
+import { PersonAccountComponent } from './person-account/person-account.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RouterModule } from '@angular/router';
     EducationComponent,
     WorkComponent,
     LoginPageComponent,
-    RegistrationPageComponent
+    RegistrationPageComponent,
+    PersonAccountComponent
  ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,FormWizardModule,RouterModule.forRoot(appRoutes, { enableTracing: true })  

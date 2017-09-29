@@ -6,8 +6,10 @@ import { WorkComponent } from './work-information/work.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { Routes } from '@angular/router';
+import { PersonAccountComponent } from './person-account/person-account.component';
 
 export const appRoutes: Routes = [
 	{path: 'registration',component: RegistrationPageComponent},
-	{path: 'login',component: LoginPageComponent}
+	{path: 'login',component: LoginPageComponent},
+	{path: 'PersonAccountComponent/:username', component: PersonAccountComponent}
 ];

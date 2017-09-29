@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
-  model: any = {};
+  model = {
+    username: '',
+    password: ''
+  };
     loading = false;
     returnUrl: string;
     ngOnInit() {
@@ -17,13 +20,14 @@ export class LoginPageComponent implements OnInit {
         // get return url from route parameters or default to '/'
        // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
-
+constructor(private router: Router){}
     login() {
         this.loading = true;
         //this.authenticationService.login(this.model.username, this.model.password)
          //   .subscribe(
           //      data => {
-                  //  this.router.navigate([this.returnUrl]);
+                    this.router.navigate(['PersonAccountComponent',this.model.username]);
+                    localStorage.setItem('LogedUser', JSON.stringify(this.model));
               //  },
                // error => {
                 //    this.alertService.error(error);
