@@ -25,7 +25,7 @@ import { PersonAccountComponent } from './person-account/person-account.componen
     PersonAccountComponent
  ],
   imports: [
-    BrowserModule,FormsModule,ReactiveFormsModule,FormWizardModule,RouterModule.forRoot(appRoutes, { enableTracing: true })  
+    BrowserModule,FormsModule,ReactiveFormsModule,FormWizardModule,RouterModule.forRoot(appRoutes)  
   ],
   providers: [],
   bootstrap: [AppComponent]

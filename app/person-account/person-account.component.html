@@ -1,3 +1,29 @@
-<p>
-  person-account works!
-</p>
+<div class='title' >
+  <a >Hello {{name}}, welcome!</a>
+  <button style="font-family: fantasy;margin-right: 20px;" (click) ="logout()" >LogOut</button>
+</div>
+<div>
+ <form-wizard>
+  <wizard-step [title]="'Personal Details'">
+    <p>{{message}}</p>
+    <app-Personal-Information (messageEvent) = "receiveMessage($event)">Waiting......</app-Personal-Information>
+  </wizard-step>
+  <wizard-step [title]="'Contact Details'">
+    <p>Contact Information</p>
+     <app-contact-information (messageEvent) = "receiveMessage($event)">Loading...............</app-contact-information>  
+  </wizard-step>
+  <wizard-step [title]="'Education Details'">
+    <p>Education Information</p>
+  </wizard-step>
+  <wizard-step [title]="'Work Profile'" (onComplete)="onComplete($event)">
+    <div [ngSwitch]="isCompleted">
+      <div *ngSwitchDefault>
+        <p>Work Profile</p>
+      </div>
+      <div *ngSwitchCase="true">
+        <h4>Thank you! You have completed all the steps.</h4>
+      </div>
+    </div>
+  </wizard-step>
+ </form-wizard>
+</div>

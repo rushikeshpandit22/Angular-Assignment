@@ -9,6 +9,7 @@ import { Routes } from '@angular/router';
 import { PersonAccountComponent } from './person-account/person-account.component';
 
 export const appRoutes: Routes = [
+	{path: ' ',component: AppComponent},
 	{path: 'registration',component: RegistrationPageComponent},
 	{path: 'login',component: LoginPageComponent},
 	{path: 'PersonAccountComponent/:username', component: PersonAccountComponent}
