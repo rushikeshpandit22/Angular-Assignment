@@ -13,3 +13,9 @@ export interface userinformation {
             zipcode: Number;    
 
 }
+
+export interface userRegistration {
+    email: string;
+    password: string;
+    confirmpassword?: string;
+}  

@@ -12,6 +12,7 @@ import { RegistrationPageComponent } from './registration-page/registration-page
 import { appRoutes } from './app.router';
 import { RouterModule } from '@angular/router';
 import { PersonAccountComponent } from './person-account/person-account.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,10 @@ import { PersonAccountComponent } from './person-account/person-account.componen
     LoginPageComponent,
     RegistrationPageComponent,
     PersonAccountComponent
+   
  ],
   imports: [
-    BrowserModule,FormsModule,ReactiveFormsModule,FormWizardModule,RouterModule.forRoot(appRoutes)  
+    BrowserModule,FormsModule,ReactiveFormsModule,FormWizardModule,RouterModule.forRoot(appRoutes),HttpModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

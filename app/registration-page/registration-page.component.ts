@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
+import { UserService } from '../user.service';
 @Component({
   selector: 'app-registration-page',
   templateUrl: './registration-page.component.html',
-  styleUrls: ['./registration-page.component.css']
+  styleUrls: ['./registration-page.component.css'],
+  providers: [UserService]
 })
 export class RegistrationPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
@@ -15,6 +16,7 @@ export class RegistrationPageComponent implements OnInit {
     loading = false;
 
     register() {
-     
+     this.userService.signupUser(this.model.email,this.model.password);
+   
     }
 }
